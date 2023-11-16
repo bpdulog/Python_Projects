@@ -2,7 +2,7 @@ import sys
 import subprocess
 import os
 
-required_modules = ['csv', 'datetime', 'time']
+required_modules = ['datetime', 'time']
 
 for m in required_modules:
     if m not in sys.modules:
