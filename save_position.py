@@ -41,6 +41,18 @@ while True:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow([timestamp, lat, lon, alt])  
 
+    # Limit the CSV file to the most recent 100 rows
+    max_rows = 100
+    with open(csv_file_path, 'r', newline='') as csv_file:
+        csv_reader = csv.reader(csv_file)
+        rows = list(csv_reader)
+
+    if len(rows) > max_rows:
+        with open(csv_file_path, 'w', newline='') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            csv_writer.writerow(['Timestamp', 'Latitude', 'Longitude', 'Altitude'])
+            csv_writer.writerows(rows[-max_rows:])
+
     print("CSV file updated at:", timestamp)  # Add this line to print a message
 
     time.sleep(60)
