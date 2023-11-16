@@ -14,7 +14,7 @@ from datetime import datetime
 import time
 
 # Specify output folder
-output_folder = os.path.join('C:\\', 'Users', 'bryan', 'Documents', 'data', 'logs') 
+output_folder = os.path.join('C:\\', 'Users', 'bryan', 'Documents') 
 
 # Specify CSV file path
 csv_file_path = os.path.join(output_folder, 'data_log.csv')
