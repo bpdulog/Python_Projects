@@ -41,4 +41,6 @@ while True:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow([timestamp, lat, lon, alt])  
 
+    print("CSV file updated at:", timestamp)  # Add this line to print a message
+
     time.sleep(60)
