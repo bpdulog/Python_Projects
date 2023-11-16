@@ -31,7 +31,7 @@ while True:
     timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
 
     # Read data from text files
-    text_folder = 'C:\\Users\\bryan\\Documents\\SimToolkitPro\\streaming' 
+    text_folder = 'C:\\Users\\bryan\\Documents\\SimToolkitPro\\streaming'
     lat = open(os.path.join(text_folder, 'lat.txt')).read()
     lon = open(os.path.join(text_folder, 'lon.txt')).read() 
     alt = open(os.path.join(text_folder, 'altitude.txt')).read()
